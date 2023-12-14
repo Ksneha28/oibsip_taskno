@@ -1,0 +1,28 @@
+print("BMI CALCULATOR")
+
+while True:
+#enter the values
+    weight = int(input("enter your weight in kilograms: "))
+    height = float(input("enter your height in meters: "))
+
+    BMI = float(weight / (height**2))
+    BMI = round(BMI, 1)
+
+    print("Body Mass Index: ", BMI)
+
+    if  0 <= BMI <=18.5:
+        print("your category is Underweight")
+    elif 18.6 <= BMI <= 24.9:
+        print("your category is Normal")
+    elif 25 <= BMI <= 29.9:
+        print("your category is overweight")
+    elif BMI >=30:
+        print("your category is obese")
+
+    calculate_again = input("Do you want calculate your BMI again? (yes or no):")
+
+    if calculate_again != "yes":
+        print("Exit")
+        break
+    
+    
